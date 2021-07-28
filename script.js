@@ -5,13 +5,14 @@ const input = document.querySelector("#input form input");
 form.addEventListener("submit", e => {
     e.preventDefault();
     const inputVal = input.value;
+    
     console.log("Working");
     console.log(inputVal);
-    console.log(input.value);
+    // console.log(input.value);
 
     const apiKey = "2c09af89cc7953eb2917b4239b1fade4";
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=2c09af89cc7953eb2917b4239b1fade4`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
 
     fetch(url
     ).then(response => response.json()
@@ -25,16 +26,14 @@ form.addEventListener("submit", e => {
                     <span>${name}</span>
                     <sup>${sys.country}</sup>
                 </h2>
-                <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup>
+                <div class="city-temp">${main.temp}<sup>°C</sup>
                 </div>
-                <!-- <figure>
-                    <img class="city-icon" src= alt=${weather[0]["main"]}>
-                    <figcaption>$weather[0]["description"]</figcaption>
-                </figure> -->
                 `;
 
 
-            const list = document.querySelector(".result ul");
+            const list = document.querySelector(".cities");
+
+            console.log(list);
 
             li.innerHTML = markup;
             list.appendChild(li);
