@@ -32,7 +32,7 @@ function displayWeatherData(data) {
                     <span>${name}</span>
                     <span>${sys.country}</span>
                 </h2>
-                <div class="city-temp">${main.temp}<sup>°C</sup></div>
+                <div class="city-temp">${main.temp}<sup>°</sup>C</div>
                 <div class="icon">
                     <img src="./icons/${weather[0].icon}.png" />
                     <p>${weather[0].description}</p>
