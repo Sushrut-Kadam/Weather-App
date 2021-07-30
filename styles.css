@@ -11,6 +11,12 @@ body{
 
 #input{
     width: 50%;
+    margin: auto;
+}
+
+#result{
+    width: auto;
+    margin-top: 5%;
 }
 
 ul{
@@ -64,7 +70,12 @@ form span{
     border: 1px solid black;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: #0abaff;
+    /* background-color: #0abaff; */
     color: #313d2f;
     text-align: center;
+}
+
+.icon p{
+    font-size: medium;
+    font-weight: bold;
 }
